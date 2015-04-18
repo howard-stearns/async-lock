@@ -35,7 +35,7 @@ This version is different from Stephen's only as follows:
 ```
 var q = new Queue();
 ```
-This is analogous to `var q = new Array();`
+This is analogous to `var anArray = new Array();`
 
 #### Adding elements
 ```
