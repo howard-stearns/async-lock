@@ -23,41 +23,43 @@ Same as `lock`, but `keys` is an array. `criticial` is not executed until each e
 
 This is a clone of Stephen Morley's Queue. The original code and a nice performance illustration is at http://code.stephenmorley.org/javascript/queues/
 
-A queue is a first-in-first-out (FIFO) data structure. Items are added to the end of the queue and removed from the front. It's just like using `Array` with `push()` and `shift`, but faster. (The built-in javascript `shift` has horrible performance for large arrays.)
+A queue is a first-in-first-out (FIFO) data structure. Items are added to the end of the queue and removed from the front. It's just like using `Array` with `push()` and `shift()`, but faster. (The built-in javascript `shift` has horrible performance for large arrays.)
 
-The version is different from Stephen's only as follows:
+This version is different from Stephen's only as follows:
+
 1. jslintable and strict
 2. node module export
 3. releases references to queued objects in dequeue, so that they can be gc'd. This is important for async-lock, because the items being queued are closures that are not used after they are dequeued, and we really don't want to keep those around.
 
-### Construction
+#### Construction
 ```
 var q = new Queue();
 ```
 This is analogous to `var q = new Array();`
 
-### Adding elements
+#### Adding elements
 ```
 q.enqueue(newElement)
 ```
 This is analogous to `anArray.push(newElement)`
 
-### Removing elements
+#### Removing elements
 ```
 var oldestItem = q.dequeue();
 ```
 This is analogous to `anArray.shift()`, but much faster for long queues.
 
-### Examining 
+#### Examining 
 ```
 var oldestItem = q.peek();
 ```
 This is analogous to `anArray[0]`.
 
-### Other
+#### Other
 ```
 q.getLength(); # like anArray.length
 q.isEmpty(); # like !anArray.length
+```
 
 ## Testing and examples
 
