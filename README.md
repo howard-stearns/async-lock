@@ -13,11 +13,9 @@ lock(pathname, function (unlock) {
 });
 ```
 
-## lockMultiple(keys, critical)
+### array of keys: multi-lock
 
-Same as `lock`, but `keys` is an array. `criticial` is not executed until each element in `keys` is unlocked. This is preferred over a nested series of `lock`s, in which the `critical` section of each would have locked the next key in turn. The nested form is subject to deadlocks that do not occur for `lockMultiple`.
-
-> *I am considering doing away with lockMultiple, and instead allowing key in lock to be an array. What do you think?*
+The `keys` argument can be an array of keys. `critical` is not executed until each element in `keys` is unlocked. This is preferred over a nested series of `lock`s, in which the `critical` section of each would have locked the next key in turn. The nested form is subject to deadlocks that do not occur when using an array of `keys`.
 
 ## Queue
 

@@ -41,4 +41,4 @@ function lockMultiple(keys, iterator) {   // Iterator is run only in a context i
 	});
 }
 exports.lock = lock;
-exports.lockMultiple = lockMultiple;
+exports.lockMultiple = util.deprecate(lockMultiple, "lockMultiple is deprecated: Use lock with an array first argument instead.");

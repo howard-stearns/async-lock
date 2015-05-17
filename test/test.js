@@ -24,7 +24,7 @@ describe('async-lock', function () {
 	});
 	it('accepts arrays of keys', function (done) {
 		var outerUnlocked = false;
-		lockMultiple(['a', 'b', 'c'], function (unlockOuter) {
+		lock(['a', 'b', 'c'], function (unlockOuter) {
 			lock('b', function (unlock) { assert.ok(outerUnlocked); unlock(); done(); });
 			outerUnlocked = true;
 			unlockOuter();
