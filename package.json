@@ -1,7 +1,6 @@
 {
   "name": "async-lock",
-  "version": "1.0.1",
-  "private": true,
+  "version": "1.0.2",
   "description": "A very simple mutex for asynchronous code, which does not spin nor busy-wait. Also exports an efficient Queue.",
   "main": "index.js",
   "scripts": {
