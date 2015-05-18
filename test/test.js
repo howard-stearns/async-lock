@@ -3,7 +3,6 @@
 var assert = require('assert');
 var mocha = require('mocha'), describe = mocha.describe, it = mocha.it;
 var lock = require('../index').lock;
-var lockMultiple = require('../index').lockMultiple;
 
 describe('async-lock', function () {
 	it('locked inner requires outer unlock', function (done) {

@@ -1,6 +1,6 @@
 {
-  "name": "async-lock",
-  "version": "1.0.2",
+  "name": "ki1r0y.lock",
+  "version": "1.0.3",
   "description": "A very simple mutex for asynchronous code, which does not spin nor busy-wait. Also exports an efficient Queue.",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/howard-stearns/async-lock.git"
+    "url": "https://github.com/howard-stearns/ki1r0y.lock.git"
   },
   "author": "Howard Stearns",
   "license": "Creative Commons 1.0 Universal",
   "bugs": {
-    "url": "https://github.com/howard-stearns/async-lock/issues"
+    "url": "https://github.com/howard-stearns/ki1r0y.lock/issues"
   },
-  "homepage": "https://github.com/howard-stearns/async-lock",
+  "homepage": "https://github.com/howard-stearns/ki1r0y.lock",
   "files": [
     "index.js", "queue.js", "test/test.js"
   ],

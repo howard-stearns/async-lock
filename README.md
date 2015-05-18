@@ -1,4 +1,4 @@
-# async-lock
+# ki1r0y.lock
 A very simple mutex for asynchronous code, which does not spin nor busy-wait. Also exports an efficient Queue.
 
 ## lock(key, critical)
@@ -27,7 +27,7 @@ This version is different from Stephen's only as follows:
 
 1. jslintable and strict
 2. node module export
-3. releases references to queued objects in dequeue, so that they can be gc'd. This is important for async-lock, because the items being queued are closures that are not used after they are dequeued, and we really don't want to keep those around.
+3. releases references to queued objects in dequeue, so that they can be gc'd. This is important for ki1r0y.lock, because the items being queued are closures that are not used after they are dequeued, and we really don't want to keep those around.
 
 #### Construction
 ```
