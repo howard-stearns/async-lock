@@ -1,7 +1,8 @@
 {
   "name": "ki1r0y.lock",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A very simple mutex for asynchronous code, which does not spin nor busy-wait. Also exports an efficient Queue.",
+  "keywords": ["lock", "mutex", "async", "queue", "asynchronous"],
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -23,6 +24,6 @@
     "mocha": "^2.2.1"
   },
   "dependencies": {
-    "async": "^0.9.0"
+    "async": "^1.0.0"
   }
 }
